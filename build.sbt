@@ -13,5 +13,8 @@ lazy val root = (project in file("."))
       Dependency.Testing.scalaITest,
       Dependency.Testing.scalaITestFlatspec
     ),
-    Compile / packageBin / mainClass := Some("io.github.rafafrdz.trianglepaths.app.MinTrianglePath")
+    Compile / packageBin / mainClass := Some(
+      "io.github.rafafrdz.trianglepaths.app.MinTrianglePath"
+    ),
+    assembly / assemblyJarName := "minmax-triangle-path.jar"
   )
