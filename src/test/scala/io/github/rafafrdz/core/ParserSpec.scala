@@ -20,20 +20,20 @@ class ParserSpec extends AnyFlatSpecLike with Matchers {
 
   "Parser" should "return a valid array from a row" in {
 
-    Parser.parseRow("7") should be(Array(7))
-    Parser.parseRow("6 3") should be(Array(6, 3))
-    Parser.parseRow("3 8 5") should be(Array(3, 8, 5))
-    Parser.parseRow("11 2 10 9") should be(Array(11, 2, 10, 9))
+    Parser.parseRow("7") should be(List(7))
+    Parser.parseRow("6 3") should be(List(6, 3))
+    Parser.parseRow("3 8 5") should be(List(3, 8, 5))
+    Parser.parseRow("11 2 10 9") should be(List(11, 2, 10, 9))
   }
 
   it should "return a valid matrix from a triangle string" in {
 
     Parser.parseTriangle(triangle) should be(
-      Vector(
-        Vector(7),
-        Vector(6, 3),
-        Vector(3, 8, 5),
-        Vector(11, 2, 10, 9)
+      List(
+        List(7),
+        List(6, 3),
+        List(3, 8, 5),
+        List(11, 2, 10, 9)
       )
     )
   }

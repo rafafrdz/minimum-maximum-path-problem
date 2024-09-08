@@ -2,9 +2,9 @@ package io.github.rafafrdz.trianglepaths.core
 
 object Parser {
 
-  def parseRow(row: String): Array[Int] =
-    row.trim.split(" ").map(_.toInt)
+  def parseRow(row: String): Row =
+    row.trim.split(" ").map(_.toInt).toList
 
-  def parseTriangle(triangle: String): Array[Array[Int]] =
-    triangle.trim.split("\n").map(parseRow)
+  def parseTriangle(triangle: String): Triangle =
+    triangle.trim.split("\n").map(parseRow).toList
 }
