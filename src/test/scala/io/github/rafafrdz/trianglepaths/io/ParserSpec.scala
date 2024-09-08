@@ -13,7 +13,8 @@ class ParserSpec extends AnyFlatSpecLike with Matchers {
     val unsafeTriangle: Triangle =
       Parser
         .parseFile[IO]("src/test/resources/triangle-example.txt")
-        .use(IO.pure)
+        .compile
+        .lastOrError
         .unsafeRunSync()
 
     unsafeTriangle shouldBe List(
