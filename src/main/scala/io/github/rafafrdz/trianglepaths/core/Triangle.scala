@@ -2,10 +2,10 @@ package io.github.rafafrdz.trianglepaths.core
 
 object Triangle {
 
-  case class Path(sum: Int, path: List[Int])
+  def minPath(triangle: Triangle): Path = searchPath(triangle)(_ < _)
 
   // General scenario by following a given criteria
-  def searchPath(triangle: List[List[Int]])(criteria: (Int, Int) => Boolean): Path = {
+  def searchPath(triangle: Triangle)(criteria: (Int, Int) => Boolean): Path = {
     // Base case: the last row is the initial set of paths
     def combineRows(upper: List[Int], lower: List[Path]): List[Path] = {
       upper.zip(lower zip lower.tail).map {
@@ -25,6 +25,6 @@ object Triangle {
     resultPaths.head
   }
 
-  def minPath(triangle: List[List[Int]]): Path = searchPath(triangle)(_ < _)
+  case class Path(sum: Int, path: List[Int])
 
 }
