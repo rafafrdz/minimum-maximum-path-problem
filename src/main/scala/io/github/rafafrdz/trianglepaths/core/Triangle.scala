@@ -2,9 +2,18 @@ package io.github.rafafrdz.trianglepaths.core
 
 object Triangle {
 
+  /**
+   * Find the path with the minimum sum in the triangle
+   * @param triangle the triangle to search
+   * @return the path with the minimum sum
+   */
   def minPath(triangle: Triangle): Path = searchPath(triangle)(_ < _)
 
-  // General scenario by following a given criteria
+  /**
+   * Find the path following a given criteria condition sum in the triangle
+   * @param triangle the triangle to search
+   * @return the path which sum holds the criteria
+   */
   def searchPath(triangle: Triangle)(criteria: (Int, Int) => Boolean): Path = {
     // Base case: the last row is the initial set of paths
     def combineRows(upper: List[Int], lower: List[Path]): List[Path] = {
@@ -21,7 +30,7 @@ object Triangle {
     // Reduce the triangle from bottom to top, combining each row
     val resultPaths: List[Path] = triangle.init.foldRight(lastRowPaths)(combineRows)
 
-    // The top element now holds the minimum path sum and the corresponding path
+    // The top element now holds the defined criteria condition sum and the corresponding path
     resultPaths.head
   }
 
