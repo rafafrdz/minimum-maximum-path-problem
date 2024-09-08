@@ -8,6 +8,8 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       Dependency.cats.core,
       Dependency.catsEffect.core,
+      Dependency.fs2.core,
+      Dependency.fs2.io,
       Dependency.Testing.scalaTest,
       Dependency.Testing.scalaTestFlatspec,
       Dependency.Testing.scalaITest,
