@@ -12,5 +12,6 @@ lazy val root = (project in file("."))
       Dependency.Testing.scalaTestFlatspec,
       Dependency.Testing.scalaITest,
       Dependency.Testing.scalaITestFlatspec
-    )
+    ),
+    Compile / packageBin / mainClass := Some("io.github.rafafrdz.trianglepaths.app.MinTrianglePath")
   )
