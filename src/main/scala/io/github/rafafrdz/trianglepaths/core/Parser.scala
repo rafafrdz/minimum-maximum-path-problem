@@ -1,4 +1,4 @@
-package io.github.rafafrdz.challenge
+package io.github.rafafrdz.trianglepaths.core
 
 object Parser {
 

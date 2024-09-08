@@ -1,5 +1,6 @@
-package io.github.rafafrdz.challenge
+package io.github.rafafrdz.core
 
+import io.github.rafafrdz.trianglepaths.core.Parser
 import org.scalatest.flatspec.AnyFlatSpecLike
 import org.scalatest.matchers.should.Matchers
 
