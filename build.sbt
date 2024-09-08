@@ -6,6 +6,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "minimum-maximum-path-problem",
     libraryDependencies ++= Seq(
+      Dependency.cats.core,
+      Dependency.catsEffect.core,
       Dependency.Testing.scalaTest,
       Dependency.Testing.scalaTestFlatspec,
       Dependency.Testing.scalaITest,

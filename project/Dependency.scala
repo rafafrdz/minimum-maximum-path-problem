@@ -2,6 +2,14 @@ import sbt._
 
 object Dependency {
 
+  object cats {
+    lazy val core: ModuleID = "org.typelevel" %% "cats-core" % Version.Cats
+  }
+
+  object catsEffect {
+    lazy val core: ModuleID = "org.typelevel" %% "cats-effect" % Version.CatsEffect
+  }
+
   object Testing {
     lazy val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Version.ScalaTest % Test
 
