@@ -2,7 +2,7 @@
 
 ## Assumptions about the application
 
-1. The application requires a single argument, the path to the file containing the data.
+1. The application requires the defined option arguments defined in the `README.md` file.
 
 ## Assumptions about the input
 

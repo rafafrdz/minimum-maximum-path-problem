@@ -6,5 +6,7 @@ object Version {
 
   lazy val CatsEffect: String = "3.3.12"
 
+    lazy val Fs2: String = "3.11.0"
+
   lazy val ScalaTest: String = "3.2.9"
 }
